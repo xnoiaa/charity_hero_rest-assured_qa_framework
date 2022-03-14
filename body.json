@@ -1,0 +1,8 @@
+{
+  "MerchantId": 2,
+  "RequestId": "string",
+  "FundId": 2,
+  "Amount": 100,
+  "Token": "test",
+  "PaymentSystemCode": "applepay"
+}
