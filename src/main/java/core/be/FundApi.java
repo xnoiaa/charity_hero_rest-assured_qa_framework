@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 
 public class FundApi extends AbstractApi {
 
-    private static final String LINK_FOR_GET_METHOD_EN_VERSION = "/api/v2/charity/fund?Language=EN";
+    private static final String LINK_FOR_GET_METHOD_EN_VERSION = "/api/v2/charity/fund?Language=en";
     private static final String LINK_FOR_POST_PAYMENT_METHOD = "/api/v2/charity/fund/payment";
 
     public FundModel getMethod(int id) {
@@ -38,6 +38,7 @@ public class FundApi extends AbstractApi {
     public void postJsonFile() throws IOException {
         String filename="body.json";
         Path pathToFile = Paths.get(filename);
+        System.out.println(pathToFile.toAbsolutePath().toString());
         String jsonBody = generateStringFromResource(pathToFile.toAbsolutePath().toString());
         RestAssured.given()
                 .contentType(ContentType.JSON)

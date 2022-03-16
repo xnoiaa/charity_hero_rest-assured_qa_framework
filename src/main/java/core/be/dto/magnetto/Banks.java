@@ -9,4 +9,10 @@ public class Banks {
     private String beneficiaryAccount;
     private String beneficiaryBankSwift;
     private String intermediarySwift;
+    private String beneficiaryName;
+    private String beneficiaryBankName;
+    private String beneficiaryBankAddress;
+    private String intermediaryName;
+    private String intermediaryAddress;
+    private String correspondentBankAccount;
 }

@@ -17,8 +17,9 @@ public class FundModel {
     private String url;
     private String iban;
     private Integer edpnou;
+    private String paymentPurpose;
     private Phones [] phones ;
     private Banks [] banks;
-    private String[] images;
+    private String [] images;
 
 }

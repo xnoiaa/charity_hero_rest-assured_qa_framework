@@ -17,17 +17,15 @@ public class FoundTestSuite {
         fundModel = fundApi.getMethod(2);
         FundModel fundModelExpected = new FundModel();
 
-        Phones phonesExpected  = new Phones();
-        phonesExpected.setTypeId(1);
-        phonesExpected.setPhoneNumber("+380980201786");
-
-        Phones[] phones = new Phones[] {phonesExpected};
+        Phones[] phones = new Phones[] {};
 
         Banks banksExpected = new Banks();
         banksExpected.setId(1);
         banksExpected.setBeneficiaryAccount("BE59967022364526");
+        banksExpected.setBeneficiaryName("MAGNETTO INTERNATIONAL LIMITED");
+        banksExpected.setBeneficiaryBankName("WISE EUROPE SA");
         banksExpected.setBeneficiaryBankSwift("TRWIBEB1XXX");
-        banksExpected.setIntermediarySwift("string");
+        banksExpected.setBeneficiaryBankAddress("Avenue Louise 54, Room S52 Brussels 1050 Belgium");
 
         Banks[] banks =new Banks[] {banksExpected};
 
@@ -37,18 +35,19 @@ public class FoundTestSuite {
         fundModelExpected.setTitle("Charity Hero program");
         fundModelExpected.setSubTitle("To help Ukraine");
         fundModelExpected.setDescription("Centralized mobile help program for Ukraine, targeted at users around the world with a guaranteed targeted humanitarian delivery based on the real needs of the funds and volunteers of Ukraine");
-        fundModelExpected.setEmail("social@magnetto.store");
+        fundModelExpected.setEmail("social@charityhero.live");
         fundModelExpected.setCategoryId(1);
         fundModelExpected.setFacebook("https://www.facebook.com/magnetto.store");
-        fundModelExpected.setUrl("https://magnetto.store/");
+        fundModelExpected.setUrl("https://www.charityhero.live/");
         fundModelExpected.setIban("BE59967022364526");
         fundModelExpected.setEdpnou(11970001);
+        fundModelExpected.setPaymentPurpose("CHARITABLE DONATION");
 
         String [] images = new String [1];
         images[0]="77dc7e06-4de1-4992-8275-e3d1d0676a2a";
         fundModelExpected.setImages(images);
 
-        Assert.assertEquals(fundModelExpected, fundModel);
+        Assert.assertEquals(fundModel, fundModelExpected);
     }
 
     @Test
@@ -69,7 +68,12 @@ public class FoundTestSuite {
         banksExpected.setId(2);
         banksExpected.setBeneficiaryAccount("UA793253650000002600801913626");
         banksExpected.setBeneficiaryBankSwift("WUCBUA2X");
-        banksExpected.setIntermediarySwift("string");
+        banksExpected.setIntermediarySwift("KREDBEBB");
+        banksExpected.setBeneficiaryName("International Charity Foundation Caritas Ukraine");
+        banksExpected.setBeneficiaryBankName("JSC KREDOBANK");
+        banksExpected.setBeneficiaryBankAddress("street Nalyvayka, 6, Lviv, Ukraine");// з бека приходить без вулиці
+        banksExpected.setIntermediaryName("KBC BANK NV");
+        banksExpected.setIntermediaryAddress("Brussels , Belgium");
 
         Banks[] banks =new Banks[] {banksExpected};
 
@@ -96,6 +100,7 @@ public class FoundTestSuite {
         fundModelExpected.setUrl("https://caritas.ua/");
         fundModelExpected.setIban("UA793253650000002600801913626");
         fundModelExpected.setEdpnou(21695710);
+        fundModelExpected.setPaymentPurpose("CHARITABLE DONATION FOR CARITAS UKRAINE");
 
         String [] images = new String [1];
         images[0]="2932eb17-57ec-4105-8821-f657d8acf489";
@@ -122,7 +127,9 @@ public class FoundTestSuite {
         banksExpected.setId(4);
         banksExpected.setBeneficiaryAccount("UA093052990000026004025029786");
         banksExpected.setBeneficiaryBankSwift("PBANUA2X");
-        banksExpected.setIntermediarySwift("string");
+        banksExpected.setBeneficiaryName("CO `INTERNATIONAL CHARITABLE FOUNDATION `COME BACK ALIVE`");
+        banksExpected.setBeneficiaryBankName("JSC CB `PRIVATBANK`");
+        banksExpected.setBeneficiaryBankAddress("1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE");
 
         Banks[] banks =new Banks[] {banksExpected};
 
@@ -142,6 +149,7 @@ public class FoundTestSuite {
         fundModelExpected.setUrl("https://savelife.in.ua/");
         fundModelExpected.setIban("UA093052990000026004025029786");
         fundModelExpected.setEdpnou(39696398);
+        fundModelExpected.setPaymentPurpose("Charitable donation to Ukrainian military");
 
         String [] images = new String [1];
         images[0]="3debb62b-6a7b-44f8-9f87-5f09e1e363b8";
@@ -168,7 +176,9 @@ public class FoundTestSuite {
         banksExpected.setId(5);
         banksExpected.setBeneficiaryAccount("DE05504000005040040066");
         banksExpected.setBeneficiaryBankSwift("MARKDEFF");
-        banksExpected.setIntermediarySwift("string");
+        banksExpected.setBeneficiaryName("National Bank of Ukraine");
+        banksExpected.setBeneficiaryBankName("DEUTSCHE BUNDESBANK, Frankfurt");
+        banksExpected.setBeneficiaryBankAddress("Wilhelm-Epstein-Strasse 14, 60431 Frankfurt Am Main, Germany");
 
         Banks[] banks =new Banks[] {banksExpected};
 
@@ -188,6 +198,7 @@ public class FoundTestSuite {
         fundModelExpected.setUrl("https://bank.gov.ua/");
         fundModelExpected.setIban("DE05504000005040040066");
         fundModelExpected.setEdpnou(32106);
+        fundModelExpected.setPaymentPurpose("for crediting account 47330992708");
 
         String [] images = new String [1];
         images[0]="ddf61f2e-f525-46bd-9d46-b46be7b2d437";
@@ -213,8 +224,10 @@ public class FoundTestSuite {
         Banks banksExpected = new Banks();
         banksExpected.setId(6);
         banksExpected.setBeneficiaryAccount("DE85500000000050002137");
+        banksExpected.setBeneficiaryName("Ministry of Social Policy of Ukraine");
+        banksExpected.setBeneficiaryBankName("DEUTSCHE BUNDESBANK, Frankfurt");
         banksExpected.setBeneficiaryBankSwift("MARKDEFF");
-        banksExpected.setIntermediarySwift("string");
+        banksExpected.setBeneficiaryBankAddress("Wilhelm-Epstein-Strasse 14, 60431 Frankfurt Am Main, Germany");
 
         Banks[] banks =new Banks[] {banksExpected};
 
@@ -232,6 +245,7 @@ public class FoundTestSuite {
         fundModelExpected.setUrl("https://www.msp.gov.ua/");
         fundModelExpected.setIban("DE85500000000050002137");
         fundModelExpected.setEdpnou(37567866);
+        fundModelExpected.setPaymentPurpose("for crediting account 32302338301027");
 
         String [] images = new String [1];
         images[0]="4673bd53-954f-4cbd-93af-8f9081a5a08a";
@@ -257,8 +271,10 @@ public class FoundTestSuite {
         Banks banksExpected = new Banks();
         banksExpected.setId(7);
         banksExpected.setBeneficiaryAccount("UA523052990000026007046710253");
+        banksExpected.setBeneficiaryName("Centre `The home of happy children`");
+        banksExpected.setBeneficiaryBankName("JSC CB PRIVATBANK");
         banksExpected.setBeneficiaryBankSwift("PBANUA2X");
-        banksExpected.setIntermediarySwift("string");
+        banksExpected.setBeneficiaryBankAddress("street Naberezhna Peremohy, 50, Dnipro, Ukraine");
 
         Banks[] banks =new Banks[] {banksExpected};
 
@@ -276,6 +292,7 @@ public class FoundTestSuite {
         fundModelExpected.setUrl("https://mistoditey.org/");
         fundModelExpected.setIban("UA523052990000026007046710253");
         fundModelExpected.setEdpnou(35133314);
+        fundModelExpected.setPaymentPurpose("Charitable donation to children");
 
         String [] images = new String [1];
         images[0]="d7e5d57a-3f60-4c4b-b837-c1ea6eef460e";
@@ -301,8 +318,10 @@ public class FoundTestSuite {
         Banks banksExpected = new Banks();
         banksExpected.setId(8);
         banksExpected.setBeneficiaryAccount("UA943052990000026003036212196");
+        banksExpected.setBeneficiaryName("International Charity Foundation `EverybodyCan`");
+        banksExpected.setBeneficiaryBankName("JSC CB PRIVATBANK");
         banksExpected.setBeneficiaryBankSwift("PBANUA2X");
-        banksExpected.setIntermediarySwift("string");
+        banksExpected.setBeneficiaryBankAddress("1D HRUSHEVSKOHO, STR., KYIV, 01001, UKRAINE");
 
         Banks[] banks =new Banks[] {banksExpected};
 
@@ -322,6 +341,7 @@ public class FoundTestSuite {
         fundModelExpected.setUrl("https://everybodycan.com.ua/");
         fundModelExpected.setIban("UA943052990000026003036212196");
         fundModelExpected.setEdpnou(39358226);
+        fundModelExpected.setPaymentPurpose("Сharitable donation to statutory activities without VAT");
 
         String [] images = new String [1];
         images[0]="53077a0f-ec20-4084-b341-f983ab02c30d";
@@ -347,8 +367,14 @@ public class FoundTestSuite {
         Banks banksExpected = new Banks();
         banksExpected.setId(9);
         banksExpected.setBeneficiaryAccount("UA473052990000026008006800726");
+        banksExpected.setBeneficiaryName("СHARITABLE FOUNDATION `KYIAN`");
+        banksExpected.setBeneficiaryBankName("JSC CB PRIVATBANK");
         banksExpected.setBeneficiaryBankSwift("PBANUA2X");
-        banksExpected.setIntermediarySwift("string");
+        banksExpected.setBeneficiaryBankAddress("1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE");
+        banksExpected.setIntermediaryName("Commerzbank AG");
+        banksExpected.setIntermediarySwift("COBADEFF");
+        banksExpected.setIntermediaryAddress("Frankfurt am Main");
+        banksExpected.setCorrespondentBankAccount("400886700401");
 
         Banks[] banks =new Banks[] {banksExpected};
 
@@ -364,6 +390,7 @@ public class FoundTestSuite {
         fundModelExpected.setUrl("https://kiyan.com.ua/");
         fundModelExpected.setIban("UA473052990000026008006800726");
         fundModelExpected.setEdpnou(41302612);
+        fundModelExpected.setPaymentPurpose("Сharitable donation to statutory activities");
 
         String [] images = new String [1];
         images[0]="77f27729-f7cd-48d5-83f0-9a4cec014b4c";
@@ -389,8 +416,10 @@ public class FoundTestSuite {
         Banks banksExpected = new Banks();
         banksExpected.setId(10);
         banksExpected.setBeneficiaryAccount("UA713052990000026007040811147");
+        banksExpected.setBeneficiaryName("CIVIL FORMATION FOR PROTECTION OF PUBLIC ORDER `SELF-DEFENSE NOVOLYNSK`");
+        banksExpected.setBeneficiaryBankName("JSC CB PRIVATBANK");
         banksExpected.setBeneficiaryBankSwift("PBANUA2X");
-        banksExpected.setIntermediarySwift("string");
+        banksExpected.setBeneficiaryBankAddress("1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE");
 
         Banks[] banks =new Banks[] {banksExpected};
 
@@ -411,6 +440,7 @@ public class FoundTestSuite {
         fundModelExpected.setUrl("https://novovolynsk.help/");
         fundModelExpected.setIban("UA713052990000026007040811147");
         fundModelExpected.setEdpnou(39144969);
+        fundModelExpected.setPaymentPurpose("Charitable donation to CIVIL FORMATION FOR PROTECTION OF PUBLIC ORDER `SELF-DEFENSE NOVOLYNSK`");
 
         String [] images = new String [1];
         images[0]="d1556bab-b531-4c00-a997-6d0a9b673e7a";
@@ -419,9 +449,10 @@ public class FoundTestSuite {
         Assert.assertEquals(fundModelExpected, fundModel);
     }
 
-//    @Test
+ //   @Test
 //    public void postTest() throws IOException {
 //        FundApi fundApi = new FundApi();
 //        fundApi.postJsonFile();
 //    }
+
 }
